@@ -6,18 +6,20 @@ export default function Fav({ name }) {
   const { favCity, addFav, removeFav } = useFav();
 
   const handleClick = () => {
-    favCity.includes(name) ? removeFav(name) : addFav(name);
+    favCity?.includes(name) ? removeFav(name) : addFav(name);
+    console.log("added", favCity.includes(name));
   };
 
+  console.log(favCity, name);
   return (
     <Container>
-      <CustomButton onClick={handleClick}>
-        {favCity.includes(name) ? (
-          <span className="added">
+      <CustomButton aria-label="addButton" onClick={handleClick}>
+        {favCity?.includes(name) ? (
+          <span aria-label="fullyHeart" className="added">
             <TiHeart />
           </span>
         ) : (
-          <span>
+          <span aria-label="emptyHeart">
             <TiHeartOutline />
           </span>
         )}

@@ -68,33 +68,27 @@ export const SearchContainer = styled.div`
 export const CurrentWeatherContainer = styled.div`
   max-width: 700px;
   width: 100%;
-  position: absolute;
-  top: 0;
+  min-height: 300px;
 `;
 export const ForecastContainer = styled.div`
   width: 100%;
   max-width: 700px;
-  position: absolute;
-  bottom: 85px;
   height: 100px;
 `;
 export const MoreInfoWeatherContainer = styled.div`
   width: 100%;
   max-width: 700px;
-  position: absolute;
-  bottom: 0;
   padding: 10px 0;
   height: 85px;
 `;
 
 export const ForecastWeatherContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
   width: 100%;
-  position: relative;
   height: calc(100vh - 100px);
+  display: grid;
+  grid-column: 1 / 3;
+  grid-row: 1;
+  grid-template-columns: 1fr;
 `;
 
 const backGroundColors = {

@@ -12,12 +12,13 @@ export default function BurguerButton({ onToggleMenu }) {
   return (
     <Container>
       <div
+        aria-label="menu-button"
         onClick={handleClick}
         className={`icon nav-icon-5 ${clicked ? "open" : ""}`}
       >
-        <span></span>
-        <span></span>
-        <span></span>
+        <span aria-label="span-menu-fs"></span>
+        <span aria-label="span-menu-sd"></span>
+        <span aria-label="span-menu-tr"></span>
       </div>
     </Container>
   );

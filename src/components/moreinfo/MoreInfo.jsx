@@ -8,15 +8,30 @@ export default function MoreInfo({ currentWeather }) {
       {currentWeather && (
         <>
           <div>
-            <p>{Math.round(currentWeather?.rh)} %</p>
+            <p>
+              <span aria-label="humidity">
+                {Math.round(currentWeather?.rh) || "-"}
+              </span>
+              %
+            </p>
             <TextMoreInfo>HUMIDITY</TextMoreInfo>
           </div>
           <div>
-            <p>{Math.round(currentWeather?.app_temp)}°</p>
+            <p>
+              <span aria-label="feellike">
+                {Math.round(currentWeather?.app_temp) || "-"}
+              </span>
+              °
+            </p>
             <TextMoreInfo>FEEL LIKE</TextMoreInfo>
           </div>
           <div>
-            <p>{Math.round(currentWeather?.wind_spd)} m/s</p>
+            <p>
+              <span aria-label="wind">
+                {Math.round(currentWeather?.wind_spd) || "-"}
+              </span>{" "}
+              m/s
+            </p>
             <TextMoreInfo>WIND</TextMoreInfo>
           </div>
           <FavContainer>

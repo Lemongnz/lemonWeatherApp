@@ -5,12 +5,18 @@ export default function ForecastItem({ item }) {
     <ForecastItemContainer>
       <div className="image">
         <img
-          alt="weather icon"
+          alt="weather"
           src={`https://www.weatherbit.io/static/img/icons/${item.weather.icon}.png`}
         />
       </div>
       <div className="temp">
-        {Math.round(item.app_max_temp)}°/ {Math.round(item.app_min_temp)}°
+        <p>
+          <span>{Math.round(item.app_max_temp)}</span>°
+        </p>
+        /
+        <p>
+          <span>{Math.round(item.app_min_temp)}</span>°
+        </p>
       </div>
     </ForecastItemContainer>
   );
