@@ -89,6 +89,9 @@ export const ForecastWeatherContainer = styled.div`
   grid-column: 1 / 3;
   grid-row: 1;
   grid-template-columns: 1fr;
+  align-content: space-between;
+  justify-content: center;
+  justify-items: center;
 `;
 
 const backGroundColors = {
