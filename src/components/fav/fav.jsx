@@ -7,10 +7,7 @@ export default function Fav({ name }) {
 
   const handleClick = () => {
     favCity?.includes(name) ? removeFav(name) : addFav(name);
-    console.log("added", favCity.includes(name));
   };
-
-  console.log(favCity, name);
   return (
     <Container>
       <CustomButton aria-label="addButton" onClick={handleClick}>
