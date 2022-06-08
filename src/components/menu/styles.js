@@ -12,6 +12,9 @@ export const Container = styled.div`
     display: flex;
     align-items: flex-end;
     z-index: 4;
+    position: absolute;
+    top: 0;
+    left: 0;
   }
 
   .list {
